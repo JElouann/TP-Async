@@ -1,3 +1,5 @@
+using Unity.Collections;
+using Unity.Jobs;
 using UnityEngine;
 
 public class Building : MonoBehaviour
@@ -30,3 +32,5 @@ public class Building : MonoBehaviour
 
     [SerializeField] private int _floors;
 }
+
+

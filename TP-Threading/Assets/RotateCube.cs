@@ -5,11 +5,12 @@ public class RotateCube : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _time;
+    private Coroutine _coroutine;
 
     // merci la flèche (ne marche pas sans stocker la coroutine)
-    public void StartRotate() => StartCoroutine(RotateCoroutine());
+    public void StartRotate() => _coroutine = StartCoroutine(RotateCoroutine());
 
-    public void StopRotate() => StopCoroutine(RotateCoroutine());
+    public void StopRotate() => StopCoroutine(_coroutine);
 
     private IEnumerator RotateCoroutine()
     {
